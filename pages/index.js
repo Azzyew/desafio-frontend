@@ -1,65 +1,59 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Desafio Frontend</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className="bg-auto bg-gray-600"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        {/* <Image
+          className="-z-1 absolute opacity-80"
+          src="/bg.png"
+          alt="background"
+          width={375}
+          height={298}
+        /> */}
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className='bg-transparent pt-3 px-4'>
+          <div className="flex justify-between">
+            <Image
+              src="/next-logo.png"
+              alt="Next.js logo"
+              width={115}
+              height={29}
+            />
+            <Image
+              src="/search.png"
+              alt="search icon"
+              width={12.75}
+              height={12.55}
+            />
+            <Image
+              src="/user.png"
+              alt="user icon"
+              width={24}
+              height={24}
+            />
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <h1 className="pt-6 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8"><span className="text-blue-300">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <h3 className="font-body text-white pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
+        
+          <div>
+            {/* fazer as tres bolinhas */}
+            <button className="bg-blue-500 text-white">VER MAIS</button>
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        </div> 
+
     </div>
   )
 }
