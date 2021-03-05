@@ -9,15 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-auto bg-gray-600"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
-
-        {/* <Image
-          className="-z-1 absolute opacity-80"
-          src="/bg.png"
-          alt="background"
-          width={375}
-          height={298}
-        /> */}
+      <div className="bg-auto bg-top-hero"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
 
         <div className='bg-transparent pt-3 px-4'>
           <div className="flex justify-between">
@@ -41,14 +33,20 @@ export default function Home() {
             />
           </div>
 
-          <h1 className="pt-6 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8"><span className="text-blue-300">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
+          <h1 className="mt-7 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8"><span className="text-blue-300">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
 
-          <h3 className="font-body text-white pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
+          <h3 className="font-body text-white pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
         
-          <div>
-            {/* fazer as tres bolinhas */}
-            <button className="bg-blue-500 text-white">VER MAIS</button>
-          </div>
+            <div className="flex justify-between mt-9 pb-8">
+
+            <div className="inline-flex items-center">
+              <div className="w-2 h-2 rounded-full bg-white mr-2" />
+              <div className="w-2 h-2 rounded-full border border-white mr-2" />
+              <div className="w-2 h-2 rounded-full border border-white" />
+            </div>
+
+              <button className="bg-blue-400 text-white text-xs px-6 py-2 rounded-md">VER MAIS</button>
+            </div>
 
         </div>
 

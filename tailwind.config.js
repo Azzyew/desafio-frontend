@@ -7,11 +7,8 @@ module.exports = {
       'body': ['Roboto', 'sans-serif'],
     },
     extend: {
-      zIndex: {
-         '-1': '-1',
-        },
       backgroundImage: theme => ({
-        'top-hero': "url('/public/bg.png')",
+        'top-hero': "url('../public/bg.png')",
       })
     },
   },
