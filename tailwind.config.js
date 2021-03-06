@@ -6,6 +6,15 @@ module.exports = {
       'title': ['Acme', 'sans-serif'],
       'body': ['Roboto', 'sans-serif'],
     },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'primary': '#197ACF',
+      'secondary': '#1A8DE9',
+    }),
+    textColor: theme => ({
+      ...theme('colors'),
+      'pale': '#96DCFA',
+    }),
     extend: {
       backgroundImage: theme => ({
         'top-hero': "url('../public/bg.png')",
