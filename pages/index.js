@@ -1,7 +1,30 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Card from '../components/card';
 
-export default function Home() {
+export default function Home(props) {
+
+  const card1 = {
+    bg: 'bg-hero1',
+    categoryColor: 'text-yellow-500',
+    category: 'CONFIDENCIAL',
+    time: '10:45'
+  }
+
+  const card2 = {
+    bg: 'bg-hero2',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    time: '13:20'
+  }
+
+  const card3 = {
+    bg: 'bg-hero3',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    time: '12 Slides'
+  }
+
   return (
     <div>
       <Head>
@@ -45,7 +68,7 @@ export default function Home() {
               <div className="w-2 h-2 rounded-full border border-white" />
             </div>
 
-              <button className="bg-gradient-to-r from-primary bg-opacity-90 to-secondary text-white text-xs px-6 py-2 rounded-md font-body">VER MAIS</button>
+              <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body">VER MAIS</button>
             </div>
 
         </div>
@@ -61,9 +84,9 @@ export default function Home() {
             height={10.5}
           />
 
-          <span className="text-gray-400">Em alta:</span>
+          <span className="text-gray-400 mr-5 ml-3">Em alta:</span>
 
-          <button className="w-6 h-6 bg-gradient-to-r from-primary bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
             <Image
               src="/cam.svg"
               alt="camera icon"
@@ -71,7 +94,7 @@ export default function Home() {
               height={10.5}
             />
           </button>
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
             <Image
               src="/headphone.svg"
               alt="headphone icon"
@@ -79,7 +102,7 @@ export default function Home() {
               height={14}
             />
           </button>
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
             <Image
               src="/book.svg"
               alt="book icon"
@@ -91,14 +114,27 @@ export default function Home() {
             <Image
               src="/rocket.svg"
               alt="rocket icon"
-              width={13}
-              height={13.5}
+              width={15}
+              height={15}
             />
           </button>
         </div>
           
         </div>
 
+        <hr className="mt-5 px-0"/>
+
+        <div className="pt-3 px-4">
+          <h1 className="my-3 text-gray-800 text-body">Recomendados</h1>
+
+          {/* cards! */}
+
+          <Card card={card1} />
+          <Card card={card2} />
+          <Card card={card3} />
+
+        </div>
+    
     </div>
   )
 }
