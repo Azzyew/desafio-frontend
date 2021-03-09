@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Card from '../components/card';
+import Footer from '../components/footer';
+import specialCard from '../components/specialCard';
 
 export default function Home(props) {
 
@@ -23,6 +25,12 @@ export default function Home(props) {
     categoryColor: 'text-green-500',
     category: 'INTERNO',
     time: '12 Slides'
+  }
+
+  const sc1 = {
+    bg: 'sc1',
+    title: 'Dicas de',
+    titleSpan: 'carreira'
   }
 
   return (
@@ -133,8 +141,63 @@ export default function Home(props) {
           <Card card={card2} />
           <Card card={card3} />
 
+        <div className="flex justify-center">
+          <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
         </div>
-    
+        
+        </div>
+
+        <div className="bg-blue-50 pl-4">
+          <h1 className="pt-3 pb-2 text-gray-800">Conteúdos especiais</h1>
+
+          {/* cards conteúdos especiais! */}
+
+          <specialCard sprecialCard={sc1}/>
+        </div>
+
+        <div className="pt-3 px-4">
+          <h1 className="my-3 text-gray-800 text-body">Você também pode gostar de:</h1>
+
+          {/* cards! */}
+
+          <Card card={card1} />
+          <Card card={card2} />
+          <Card card={card3} />
+
+        <div className="flex justify-center">
+          <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
+        </div>
+        
+        </div>
+
+        <div className="bg-blue-50 pl-4">
+          <h2 className="pt-4 pb-2 text-gray-800 font-body">Ainda não encontrou o que assistir?</h2>
+          <h1 className="text-bright font-body">Busque por suas categorias preferidas</h1>
+          <button className="bg-primary text-white font-body">BUSCAR</button>
+        </div>
+
+        <div className="pt-3 px-4">
+          <h1 className="my-3 text-gray-800 text-body">Veja também</h1>
+
+          {/* cards! */}
+
+          <Card card={card1} />
+          <Card card={card2} />
+          <Card card={card3} />
+
+        <div className="flex justify-center pt-5 pb-6">
+          <Image
+            src="/downArrow.svg"
+            alt="down arrow icon"
+            width={16}
+            height={9}
+          />
+        </div>
+        
+        </div>
+        
+    <Footer />
+
     </div>
   )
 }

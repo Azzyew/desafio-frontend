@@ -27,6 +27,7 @@ module.exports = {
         'hero1': "url('../public/bg1.svg')",
         'hero2': "url('../public/bg2.svg')",
         'hero3': "url('../public/bg3.svg')",
+        'specialCard1': "url('../public/sc1.svg')",
       }),
       backgroundOpacity: {
         '85': '0.85',

@@ -5,13 +5,13 @@ export default function Card(props) {
 
     return (
         <div className="mt-5">
-            <div className={`h-48 w-auto rounded-md flex ${card.bg}`}> {/* AQUI VAI A FOTO DE BACKGROUND! */}
+            <div className={`h-48 w-auto rounded-md flex ${card.bg} justify-between`}> {/* AQUI VAI A FOTO DE BACKGROUND! */}
                 <div className="bg-white bg-opacity-85 text-xs w-auto h-6 flex rounded-l-none rounded-t-none rounded-md">
                     <span className={`pt-1 px-2 ml-1 ${card.categoryColor}`}>{card.category}</span>
                 </div>
 
-                <div className="bg-white bg-opacity-85 w-1/4 h-6 flex self-end rounded-3xl flex-col">
-                    <div className="text-sm px-1 self-end flex-auto ">
+                <div className="bg-white bg-opacity-85 mr-4 mb-4 flex self-end rounded-3xl">
+                    <div className="text-sm self-end px-2 py-0.5 flex-row items-center">
                         <Image
                             src="/blueCam.svg"
                             alt="camera icon"
