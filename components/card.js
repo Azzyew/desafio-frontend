@@ -13,10 +13,10 @@ export default function Card(props) {
                 <div className="bg-white bg-opacity-85 mr-4 mb-4 flex self-end rounded-3xl">
                     <div className="text-sm self-end px-2 py-0.5 flex-row items-center">
                         <Image
-                            src="/blueCam.svg"
-                            alt="camera icon"
-                            width={14.5}
-                            height={11}
+                            src={card.src}
+                            alt={card.alt}
+                            width={card.w}
+                            height={card.h}
                         />
                         <span className="text-bright pl-1 flex-auto">| </span>
                         <span className="text-bright pl-1 flex-auto">{card.time}</span>

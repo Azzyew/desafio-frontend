@@ -11,6 +11,10 @@ export default function Home(props) {
     bg: 'bg-hero1',
     categoryColor: 'text-yellow-500',
     category: 'CONFIDENCIAL',
+    src: "/blueCam.svg",
+    alt: "camera icon",
+    w: 14.5,
+    h: 11,
     time: '10:45'
   }
 
@@ -18,6 +22,10 @@ export default function Home(props) {
     bg: 'bg-hero2',
     categoryColor: 'text-green-500',
     category: 'INTERNO',
+    src: "/blueCam.svg",
+    alt: "camera icon",
+    w: 14.5,
+    h: 11,
     time: '13:20'
   }
 
@@ -25,6 +33,10 @@ export default function Home(props) {
     bg: 'bg-hero3',
     categoryColor: 'text-green-500',
     category: 'INTERNO',
+    src: "/document.svg",
+    alt: "document icon",
+    w: 13,
+    h: 13,
     time: '12 Slides'
   }
 
@@ -63,18 +75,24 @@ export default function Home(props) {
               width={115}
               height={29}
             />
-            <Image
-              src="/search.png"
-              alt="search icon"
-              width={12.75}
-              height={12.55}
-            />
-            <Image
-              src="/user.png"
-              alt="user icon"
-              width={24}
-              height={18}
-            />
+            <div className="flex items-center">
+              <div className="pr-4">
+                <Image
+                  src="/search.svg"
+                  alt="search icon"
+                  width={14}
+                  height={14}
+                />
+              </div>
+              <div>
+                <Image
+                  src="/user.svg"
+                  alt="user icon"
+                  width={24}
+                  height={18}
+                />
+              </div>
+            </div>
           </div>
 
           <h1 className="mt-7 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8"><span className="text-pale">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
@@ -163,11 +181,12 @@ export default function Home(props) {
         <div className="bg-blue-50 pl-4">
           <h1 className="pt-6 pb-4 text-gray-800">Conteúdos especiais</h1>
 
-          {/* cards conteúdos especiais! */}
+          <div className="flex pb-6">{/* cards conteúdos especiais! */}
 
-          <SpecialCard specialCard={sc1}/>
-          <SpecialCard specialCard={sc2}/>
+          <SpecialCard specialCard={sc1} />
+          <SpecialCard specialCard={sc2} />
 
+          </div>
         </div>
 
         <div className="pt-3 px-4">
