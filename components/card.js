@@ -23,7 +23,7 @@ export default function Card(props) {
                     </div>
                 </div>
 
-                <div className="flex absolute">
+                <div className="flex">
                     <div className="w-3/5 h-1.5 bg-pale"/>
                     <div className="w-2/5 h-1.5 bg-primary"/>
                 </div>

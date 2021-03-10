@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Card from '../components/card';
+import Categories from '../components/categories';
 import Footer from '../components/footer';
-import specialCard from '../components/specialCard';
+import SpecialCard from '../components/specialCard';
 
 export default function Home(props) {
 
@@ -28,10 +29,22 @@ export default function Home(props) {
   }
 
   const sc1 = {
-    bg: 'sc1',
+    bg: 'bg-specialCard1',
     title: 'Dicas de',
     titleSpan: 'carreira'
   }
+
+  const sc2 = {
+    bg: 'bg-specialCard2',
+    title: 'Do mil',
+    titleSpan: 'milhão'
+  }
+
+  const c1 = { name: 'Seguro Auto' }
+
+  const c2 = { name: 'Nossa Rede' }
+
+  const c3 = { name: 'Ferramentas e Sistemas' }
 
   return (
     <div>
@@ -148,11 +161,13 @@ export default function Home(props) {
         </div>
 
         <div className="bg-blue-50 pl-4">
-          <h1 className="pt-3 pb-2 text-gray-800">Conteúdos especiais</h1>
+          <h1 className="pt-6 pb-4 text-gray-800">Conteúdos especiais</h1>
 
           {/* cards conteúdos especiais! */}
 
-          <specialCard sprecialCard={sc1}/>
+          <SpecialCard specialCard={sc1}/>
+          <SpecialCard specialCard={sc2}/>
+
         </div>
 
         <div className="pt-3 px-4">
@@ -170,10 +185,27 @@ export default function Home(props) {
         
         </div>
 
-        <div className="bg-blue-50 pl-4">
-          <h2 className="pt-4 pb-2 text-gray-800 font-body">Ainda não encontrou o que assistir?</h2>
-          <h1 className="text-bright font-body">Busque por suas categorias preferidas</h1>
-          <button className="bg-primary text-white font-body">BUSCAR</button>
+        <div className="bg-blue-50">
+          <h2 className="pt-4 text-gray-800 font-body flex justify-center">Ainda não encontrou o que assistir?</h2>
+          <h1 className="text-bright font-body text-lg flex justify-center">Busque por suas categorias preferidas</h1>
+          <div className="pl-4 pt-3 flex justify-between">
+            <Categories categories={c1} />
+            <Categories categories={c2} />
+            <Categories categories={c3} />
+          </div>
+          <div className="px-4 pb-8">
+            <div className="py-4 flex pt-5">
+              <Image
+                src="/graySearch.svg"
+                alt="search icon"
+                width={14}
+                height={14}
+              />
+              <input className="bg-transparent border-b-1 border-pink-800 w-full ml-2" type="text" placeholder="Ou procure por novas ideias..."/>
+            </div>
+            <button className="bg-primary text-white font-body w-full rounded-sm py-2 mt-2">BUSCAR</button>
+          </div>
+          
         </div>
 
         <div className="pt-3 px-4">
@@ -195,8 +227,8 @@ export default function Home(props) {
         </div>
         
         </div>
-        
-    <Footer />
+
+      <Footer />
 
     </div>
   )
