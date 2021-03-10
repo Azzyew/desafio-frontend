@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Card from '../components/card';
 import Categories from '../components/categories';
 import Footer from '../components/footer';
+import Menu from '../components/menu';
 import SpecialCard from '../components/specialCard';
 
 export default function Home(props) {
@@ -64,6 +65,8 @@ export default function Home(props) {
         <title>Desafio Frontend</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Menu className="hidden lg:block"/>
 
       <div className="bg-cover bg-top-hero"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
 
