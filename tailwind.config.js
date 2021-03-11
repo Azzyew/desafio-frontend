@@ -32,6 +32,9 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
     },
+    fontSize: {
+      'big': '2rem',
+    },
     extend: {
       backgroundImage: theme => ({
         'top-hero': "url('../public/bg.png')",
@@ -43,7 +46,13 @@ module.exports = {
       }),
       backgroundOpacity: {
         '85': '0.85',
-      }
+      },
+      width: {
+        '424p': '26.5rem',
+      },
+      height: {
+        '82': '21.5rem',
+      },
     },
   },
   variants: {

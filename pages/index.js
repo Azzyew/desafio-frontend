@@ -60,18 +60,43 @@ export default function Home(props) {
   const c3 = { name: 'Ferramentas e Sistemas' }
 
   return (
-    <div>
+    <div className="flex">
       <Head>
         <title>Desafio Frontend</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu className="hidden lg:block"/>
+      <Menu />
 
-      <div className="bg-cover bg-top-hero"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
+{/* <div className="flex"> */}
+      
+      <div className="bg-cover bg-top-hero lg:h-82 lg:w-full lg:px-16 lg:justify-between"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
 
-        <div className='bg-transparent pt-3 px-4'>
-          <div className="flex justify-between">
+        <div className='bg-transparent pt-4 px-4 lg:h-82'>
+
+        <div className="lg:flex lg:justify-between">
+
+          <div className="hidden lg:flex border-b-2 border-gray-500 w-424p">
+          <div className="mr-2">
+            <Image
+              src="/graySearch.svg"
+              alt="search icon"
+              width={13}
+              height={13}
+            />
+          </div>
+            <input placeholder="Pesquisar" type="text" className="bg-transparent"></input>
+          <div className="flex items-end">
+            <Image
+              src="/filter.svg"
+              alt="search icon"
+              width={24}
+              height={24}
+            />
+          </div>
+        </div>
+
+          <div className="flex justify-between lg:hidden">
             <Image
               src="/next-logo.png"
               alt="Next.js logo"
@@ -98,23 +123,62 @@ export default function Home(props) {
             </div>
           </div>
 
-          <h1 className="mt-7 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8"><span className="text-pale">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
+          <div className="hidden lg:flex items-center">
+            <div className="mr-6">
+              <Image
+                src="/help.svg"
+                alt="help icon"
+                width={20}
+                height={20}
+              />
+            </div>
+            <div className="mr-6">
+              <Image
+                src="/notifications.svg"
+                alt="notifications icon"
+                width={16}
+                height={16.5}
+              />
+            </div>
+            <Image
+              src="/webUser.svg"
+              alt="user icon"
+              width={32}
+              height={32}
+            />
+          </div>
+        </div>
 
-          <h3 className="font-body text-white pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
-        
-            <div className="flex justify-between mt-9 pb-8">
-
-            <div className="inline-flex items-center">
-              <div className="w-2 h-2 rounded-full bg-white mr-4" />
-              <div className="w-2 h-2 rounded-full border border-white mr-4" />
-              <div className="w-2 h-2 rounded-full border border-white" />
+          <div>
+            <div className="lg:mt-28 lg:w-424p">
+              <h1 className="mt-7 text-2xl font-title text-white subpixel-antialiased tracking-wide leading-8 lg:text-big"><span className="text-pale">Lorem </span>ipsum dolor sit amet, consectetuer adipiscing.</h1>
+              <h3 className="font-body text-white pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
             </div>
 
-              <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body">VER MAIS</button>
-            </div>
+            <Image
+              src="/arrowRightSlim.svg"
+              alt="right arrow icon"
+              width={24}
+              height={24}
+            />
+
+            <div className="flex justify-between mt-9 pb-8 lg:mt-0">
+              <div className="inline-flex items-center">
+                <div className="w-2 h-2 rounded-full bg-white mr-4" />
+                <div className="w-2 h-2 rounded-full border border-white mr-4" />
+                <div className="w-2 h-2 rounded-full border border-white" />
+              </div>
+
+              <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body lg:text-sm">VER MAIS</button>
+            </div>  
+          </div>
 
         </div>
         </div>
+
+        {/* </div> */}
+
+        <div className="">
 
         <div className="pt-3 px-4">
 
@@ -223,7 +287,7 @@ export default function Home(props) {
                 width={14}
                 height={14}
               />
-              <input className="bg-transparent border-b-1 border-pink-800 w-full ml-2" type="text" placeholder="Ou procure por novas ideias..."/>
+              <input className="bg-transparent border-b-2 w-full ml-2" type="text" placeholder="Ou procure por novas ideias..."/>
             </div>
             <button className="bg-primary text-white font-body w-full rounded-sm py-2 mt-2">BUSCAR</button>
           </div>
@@ -248,6 +312,8 @@ export default function Home(props) {
           />
         </div>
         
+        </div>
+
         </div>
 
       <Footer />

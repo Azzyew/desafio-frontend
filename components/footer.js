@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="flex justify-evenly mb-1 shadow-top2xl">
+        <div className="flex justify-evenly mb-1 shadow-top2xl lg:hidden">
             <button className="flex flex-col items-center justify-center text-bright font-body text-xs bg-blue-50 rounded-md w-16 h-12">
                 <Image
                     src="/house.svg"
