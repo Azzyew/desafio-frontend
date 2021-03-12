@@ -1,8 +1,10 @@
+import { motion } from "framer-motion";
+
 export default function SpecialCard(props) {
     const specialCard = props.specialCard;
 
     return (
-        <div className="lg:mr-6">
+        <div className="mr-4 lg:mr-6">
             <div className={`h-64 w-auto rounded-md flex ${specialCard.bg} bg-cover lg:w-440`}> {/* AQUI VAI A FOTO DE BACKGROUND! */}
                 <div className="pt-8 pb-6 px-6">
                     <div>
@@ -16,7 +18,13 @@ export default function SpecialCard(props) {
                     </div>
 
                     <div className="mt-7 flex lg:ml-72">
-                        <button className="text-white font-body bg-primary w-auto h-auto text-sm py-2 px-3 rounded-sm">SAIBA MAIS</button>
+                        <motion.button
+                            className="text-white font-body bg-primary w-auto h-auto text-sm py-2 px-3 rounded-sm"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            SAIBA MAIS
+                        </motion.button>
                     </div>
                 </div>
             </div>

@@ -379,13 +379,13 @@ export default function Home(props) {
           <h1 className="my-3 text-gray-800 text-body lg:-m-8 lg:pb-7 lg:ml-0">Recomendados</h1>
 
           <div className="lg:flex lg:flex-wrap">{/* cards! */}
-            <div className="lg:flex lg:flex-wrap lg:justify-between">
+            <div className="lg:flex lg:flex-wrap lg:justify-between w-full">
               <Card card={card1} />
               <Card card={card2} />
               <Card card={card3} />
               <Card card={card4} />
             </div>
-            <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+            <div className="hidden lg:flex lg:flex-wrap lg:justify-between w-full">
               
               <Card card={card5} />
               <Card card={card6} />
@@ -422,14 +422,14 @@ export default function Home(props) {
 
           <div className="lg:flex lg:flex-wrap lg:flex-row lg:justify-between">{/* cards! */}
             
-          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between w-full">
             <Card card={card9} />
             <Card card={card10} />
             <Card card={card11} />
             <Card card={card12} />
           </div>
           
-          <div className="lg:flex lg:flex-wrap lg:justify-between">
+          <div className="lg:flex lg:flex-wrap lg:justify-between w-full">
             <Card card={card1} />
             <Card card={card2} />
             <Card card={card3} />
@@ -437,7 +437,7 @@ export default function Home(props) {
           </div>
 
 
-          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between w-full">
             <Card card={card5} />
             <Card card={card6} />
             <Card card={card7} />
@@ -493,21 +493,21 @@ export default function Home(props) {
 
           <div className="lg:flex lg:flex-wrap lg:flex-row lg:justify-between">{/* cards! */}
             
-          <div className="hidden lg:flex lg:justify-between"> 
+          <div className="hidden lg:flex lg:justify-between w-full"> 
             <Card card={card9} />
             <Card card={card10} />
             <Card card={card11} />
             <Card card={card12} />
           </div> 
 
-          <div className="lg:flex lg:flex-wrap lg:justify-between">
+          <div className="lg:flex lg:flex-wrap lg:justify-between w-full">
             <Card card={card1} />
             <Card card={card2} />
             <Card card={card3} />
             <Card card={card4} />
           </div>
 
-          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between w-full">
             <Card card={card5} />
             <Card card={card6} />
             <Card card={card7} />

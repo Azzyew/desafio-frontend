@@ -6,7 +6,6 @@ export default function Card(props) {
 
     return (
         <div className="mt-5 lg:w-62">
-            {/* <div className={`h-48 w-82 rounded-md flex ${card.bg} justify-between bg-contain lg:w-62 lg:h-36`}>  */}
             {/* AQUI VAI A FOTO DE BACKGROUND! */}
             <motion.div
                     className={`h-48 w-82 rounded-md flex ${card.bg} justify-between bg-contain lg:w-62 lg:h-36`}
@@ -17,7 +16,7 @@ export default function Card(props) {
                     <span className={`pt-1 px-2 ml-1 ${card.categoryColor} lg:hidden`}>{card.category}</span>
                 </div>
 
-                <div className="bg-white bg-opacity-85 mr-4 mb-4 flex self-end rounded-3xl lg:mr-0 lg:ml-32">
+                <div className="bg-white bg-opacity-85 mr-4 mb-4 flex self-end rounded-3xl ml-32 lg:mr-0">
                     <div className="text-sm self-end px-2 py-0.5 flex-row items-center">
                         <Image
                             src={card.src}
@@ -34,7 +33,6 @@ export default function Card(props) {
                     <div className="w-3/5 h-1.5 bg-pale"/>
                     <div className="w-2/5 h-1.5 bg-primary"/>
                 </div>
-            {/* </div> */}
             </motion.div>
             <div>
                 <h1 className="text-gray-900 text-sm pt-4 pb-1">Lorem ipsum dolor sit amet, consectetuer adipiscing e...</h1>
