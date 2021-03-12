@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 import Card from '../components/card';
 import Categories from '../components/categories';
 import Footer from '../components/footer';
@@ -16,7 +17,9 @@ export default function Home(props) {
     alt: "camera icon",
     w: 14.5,
     h: 11,
-    time: '10:45'
+    time: '10:45',
+    area: 'Produtos',
+    clock: true
   }
 
   const card2 = {
@@ -27,7 +30,9 @@ export default function Home(props) {
     alt: "camera icon",
     w: 14.5,
     h: 11,
-    time: '13:20'
+    time: '13:20',
+    area: 'Produtos',
+    clock: true
   }
 
   const card3 = {
@@ -38,7 +43,119 @@ export default function Home(props) {
     alt: "document icon",
     w: 13,
     h: 13,
-    time: '12 Slides'
+    time: '12 Slides',
+    area: 'Produtos',
+    clock: true
+  }
+
+  const card4 = {
+    bg: 'bg-hero4',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueHeadphone.svg",
+    alt: "headphone icon",
+    w: 13,
+    h: 13,
+    time: '14:35',
+    area: 'Ferramentas e Sistemas'
+  }
+
+  const card5 = {
+    bg: 'bg-hero5',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueCam.svg",
+    alt: "camera icon",
+    w: 14.5,
+    h: 11,
+    time: '10:45',
+    area: 'Tecnologia da Informação',
+    clock: true
+  }
+
+  const card6 = {
+    bg: 'bg-hero6',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueBook.svg",
+    alt: "book icon",
+    w: 13,
+    h: 11,
+    time: '~5m',
+    area: 'Recursos Humanos'
+  }
+
+  const card7 = {
+    bg: 'bg-hero7',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/document.svg",
+    alt: "document icon",
+    w: 13,
+    h: 13,
+    time: '16 Slides',
+    area: 'Treinamentos'
+  }
+
+  const card8 = {
+    bg: 'bg-hero8',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueHeadphone.svg",
+    alt: "headphone icon",
+    w: 12.5,
+    h: 12.5,
+    time: '36:28',
+    area: 'Compliance',
+    clock: true
+  }
+
+  const card9 = {
+    bg: 'bg-hero9',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueCam.svg",
+    alt: "camera icon",
+    w: 14.5,
+    h: 11,
+    time: '10:45',
+    area: 'Seguro Auto'
+  }
+
+  const card10 = {
+    bg: 'bg-hero10',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/document.svg",
+    alt: "document icon",
+    w: 13,
+    h: 13,
+    time: '12 Slides',
+    area: 'Contact Center'
+  }
+
+  const card11 = {
+    bg: 'bg-hero11',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/document.svg",
+    alt: "document icon",
+    w: 13,
+    h: 13,
+    time: '16 Slides',
+    area: 'Estratégia e Modelo de Negócios'
+  }
+
+  const card12 = {
+    bg: 'bg-hero12',
+    categoryColor: 'text-green-500',
+    category: 'INTERNO',
+    src: "/blueCam.svg",
+    alt: "camera icon",
+    w: 14.5,
+    h: 11,
+    time: '10:45',
+    area: 'Ferramentas e Sistemas'
   }
 
   const sc1 = {
@@ -68,7 +185,7 @@ export default function Home(props) {
 
       <Menu />
 
-{/* <div className="flex"> */}
+      <div className="w-screen">
       
       <div className="bg-cover bg-top-hero lg:h-82 lg:w-full lg:px-16 lg:justify-between"> {/*AQUI TEM Q TER A FOTO DE BG!! */}
 
@@ -76,7 +193,7 @@ export default function Home(props) {
 
         <div className="lg:flex lg:justify-between">
 
-          <div className="hidden lg:flex border-b-2 border-gray-500 w-424p">
+          <div className="hidden lg:flex border-b-2 border-gray-500 w-424p items-center">
           <div className="mr-2">
             <Image
               src="/graySearch.svg"
@@ -155,34 +272,27 @@ export default function Home(props) {
               <h3 className="font-body text-white pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu suspendisse vel sed vulputate et leo tincidunt.</h3>
             </div>
 
-            <Image
-              src="/arrowRightSlim.svg"
-              alt="right arrow icon"
-              width={24}
-              height={24}
-            />
-
             <div className="flex justify-between mt-9 pb-8 lg:mt-0">
-              <div className="inline-flex items-center">
+              <div className="inline-flex items-center lg:mt-4">
                 <div className="w-2 h-2 rounded-full bg-white mr-4" />
                 <div className="w-2 h-2 rounded-full border border-white mr-4" />
                 <div className="w-2 h-2 rounded-full border border-white" />
               </div>
 
-              <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body lg:text-sm">VER MAIS</button>
+              <div className="lg:-m-20">
+                <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body lg:text-sm lg:mr-20">VER MAIS</button>
+              </div>
             </div>  
           </div>
 
         </div>
         </div>
 
-        {/* </div> */}
-
-        <div className="">
+        <div>
 
         <div className="pt-3 px-4">
 
-        <div className="pt-2 flex items-center">
+        <div className="pt-2 flex items-center lg:justify-end lg:mr-20">
           <Image
             src="/arrow.svg"
             alt="up arrow icon"
@@ -190,54 +300,79 @@ export default function Home(props) {
             height={10.5}
           />
 
-          <span className="text-gray-400 mr-5 ml-3">Em alta:</span>
+          <span className="text-gray-400 mr-5 ml-3 lg:text-sm lg:mr-6">Em alta:</span>
 
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
-            <Image
-              src="/cam.svg"
-              alt="camera icon"
-              width={14}
-              height={10.5}
-            />
-          </button>
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
-            <Image
-              src="/headphone.svg"
-              alt="headphone icon"
-              width={14}
-              height={14}
-            />
-          </button>
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full mr-4">
-            <Image
-              src="/book.svg"
-              alt="book icon"
-              width={13}
-              height={11}
-            />
-          </button>
-          <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
-            <Image
-              src="/rocket.svg"
-              alt="rocket icon"
-              width={15}
-              height={15}
-            />
-          </button>
+          <div className="hidden lg:flex">
+            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+              <Image
+                src="/cam.svg"
+                alt="camera icon"
+                width={14}
+                height={10.5}
+              />
+            </button>
+            <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Vídeos</span>
+          </div>
+
+          <div className="hidden lg:flex">
+            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+              <Image
+                src="/headphone.svg"
+                alt="headphone icon"
+                width={14}
+                height={14}
+              />
+            </button>
+            <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Podcasts</span>
+          </div>
+
+          <div className="hidden lg:flex">
+            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+              <Image
+                src="/book.svg"
+                alt="book icon"
+                width={13}
+                height={11}
+              />
+            </button>
+            <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Artigos</span>
+          </div>
+
+          <div className="hidden lg:flex">
+            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+              <Image
+                src="/rocket.svg"
+                alt="rocket icon"
+                width={15}
+                height={15}
+              />
+            </button>
+            <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Trilhas</span>
+          </div>
         </div>
           
         </div>
 
-        <hr className="mt-5 px-0"/>
+        <hr className="mt-5 px-0 lg:hidden"/>
 
-        <div className="pt-3 px-4">
-          <h1 className="my-3 text-gray-800 text-body">Recomendados</h1>
+        <div className="pt-3 px-4 lg:mx-20 lg:px-0">
+          <h1 className="my-3 text-gray-800 text-body lg:-m-8 lg:pb-7 lg:ml-0">Recomendados</h1>
 
-          {/* cards! */}
-
-          <Card card={card1} />
-          <Card card={card2} />
-          <Card card={card3} />
+          <div className="lg:flex lg:flex-wrap">{/* cards! */}
+            <div className="lg:flex lg:flex-wrap lg:justify-between">
+              <Card card={card1} />
+              <Card card={card2} />
+              <Card card={card3} />
+              <Card card={card4} />
+            </div>
+            <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+              
+              <Card card={card5} />
+              <Card card={card6} />
+              <Card card={card7} />
+              <Card card={card8} />
+            </div>
+          </div>
 
         <div className="flex justify-center">
           <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
@@ -246,9 +381,9 @@ export default function Home(props) {
         </div>
 
         <div className="bg-blue-50 pl-4">
-          <h1 className="pt-6 pb-4 text-gray-800">Conteúdos especiais</h1>
+          <h1 className="pt-6 pb-4 text-gray-800 lg:ml-20">Conteúdos especiais</h1>
 
-          <div className="flex pb-6">{/* cards conteúdos especiais! */}
+          <div className="flex pb-6 lg:mx-20">{/* cards conteúdos especiais! */}
 
           <SpecialCard specialCard={sc1} />
           <SpecialCard specialCard={sc2} />
@@ -256,14 +391,35 @@ export default function Home(props) {
           </div>
         </div>
 
-        <div className="pt-3 px-4">
+        <div className="pt-3 px-4 lg:mx-20">
           <h1 className="my-3 text-gray-800 text-body">Você também pode gostar de:</h1>
 
-          {/* cards! */}
+          <div className="lg:flex lg:flex-wrap lg:flex-row lg:justify-between">{/* cards! */}
+            
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+            <Card card={card9} />
+            <Card card={card10} />
+            <Card card={card11} />
+            <Card card={card12} />
+          </div>
+          
+          <div className="lg:flex lg:flex-wrap lg:justify-between">
+            <Card card={card1} />
+            <Card card={card2} />
+            <Card card={card3} />
+            <Card card={card4} />
+          </div>
 
-          <Card card={card1} />
-          <Card card={card2} />
-          <Card card={card3} />
+
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+            <Card card={card5} />
+            <Card card={card6} />
+            <Card card={card7} />
+            <Card card={card8} />
+          </div>
+
+          </div>
+
 
         <div className="flex justify-center">
           <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
@@ -273,14 +429,14 @@ export default function Home(props) {
 
         <div className="bg-blue-50">
           <h2 className="pt-4 text-gray-800 font-body flex justify-center">Ainda não encontrou o que assistir?</h2>
-          <h1 className="text-bright font-body text-lg flex justify-center">Busque por suas categorias preferidas</h1>
-          <div className="pl-4 pt-3 flex justify-between">
+          <h1 className="text-bright font-body text-lg flex justify-center lg:text-2xl">Busque por suas categorias preferidas</h1>
+          <div className="pl-4 pt-3 flex justify-between lg:justify-evenly lg:px-80">
             <Categories categories={c1} />
             <Categories categories={c2} />
             <Categories categories={c3} />
           </div>
-          <div className="px-4 pb-8">
-            <div className="py-4 flex pt-5">
+          <div className="px-4 pb-8 lg:px-80">
+            <div className="py-4 flex pt-5 lg:justify-center">
               <Image
                 src="/graySearch.svg"
                 alt="search icon"
@@ -297,11 +453,30 @@ export default function Home(props) {
         <div className="pt-3 px-4">
           <h1 className="my-3 text-gray-800 text-body">Veja também</h1>
 
-          {/* cards! */}
+          <div className="lg:flex lg:flex-wrap lg:flex-row lg:justify-between">{/* cards! */}
+            
+          <div className="hidden lg:flex lg:justify-between"> 
+            <Card card={card9} />
+            <Card card={card10} />
+            <Card card={card11} />
+            <Card card={card12} />
+          </div> 
 
-          <Card card={card1} />
-          <Card card={card2} />
-          <Card card={card3} />
+          <div className="lg:flex lg:flex-wrap lg:justify-between">
+            <Card card={card1} />
+            <Card card={card2} />
+            <Card card={card3} />
+            <Card card={card4} />
+          </div>
+
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-between">
+            <Card card={card5} />
+            <Card card={card6} />
+            <Card card={card7} />
+            <Card card={card8} />
+          </div>
+
+          </div>
 
         <div className="flex justify-center pt-5 pb-6">
           <Image
@@ -316,7 +491,9 @@ export default function Home(props) {
 
         </div>
 
-      <Footer />
+        <Footer />
+        
+        </div>
 
     </div>
   )

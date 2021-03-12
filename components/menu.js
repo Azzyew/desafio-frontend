@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Menu() {
     return (
-        <div className="font-body text-gray-500 h-screen flex flex-col w-1/5 border border-l-2 hidden lg:flex">
+        <div className="font-body text-gray-500 h-auto flex flex-col w-1/5 border border-l-2 hidden lg:flex">
             <div className="mb-2 shadow-lg">
                 <Image
                     src="/next-logo.png"
