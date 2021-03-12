@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Card(props) {
     const card = props.card;
 
     return (
         <div className="mt-5 lg:w-62">
-            <div className={`h-48 w-82 rounded-md flex ${card.bg} justify-between bg-contain lg:w-62 lg:h-36`}> {/* AQUI VAI A FOTO DE BACKGROUND! */}
+            {/* <div className={`h-48 w-82 rounded-md flex ${card.bg} justify-between bg-contain lg:w-62 lg:h-36`}>  */}
+            {/* AQUI VAI A FOTO DE BACKGROUND! */}
+            <motion.div
+                    className={`h-48 w-82 rounded-md flex ${card.bg} justify-between bg-contain lg:w-62 lg:h-36`}
+                    whileHover={{ scale: 1.2 }}
+                >
+    
                 <div className="bg-white bg-opacity-85 text-xs w-auto h-6 flex rounded-l-none rounded-t-none rounded-md">
                     <span className={`pt-1 px-2 ml-1 ${card.categoryColor} lg:hidden`}>{card.category}</span>
                 </div>
@@ -27,8 +34,8 @@ export default function Card(props) {
                     <div className="w-3/5 h-1.5 bg-pale"/>
                     <div className="w-2/5 h-1.5 bg-primary"/>
                 </div>
-            </div>
-            
+            {/* </div> */}
+            </motion.div>
             <div>
                 <h1 className="text-gray-900 text-sm pt-4 pb-1">Lorem ipsum dolor sit amet, consectetuer adipiscing e...</h1>
                 <div className="flex text-sm pb-2">

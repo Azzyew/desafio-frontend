@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Menu() {
     return (
@@ -14,22 +15,76 @@ export default function Menu() {
 
             <div className="px-6 flex flex-col items-start text-sm">
 
-                <button className="text-bright pt-7 pb-2.5">Início</button>
-                <button className="pb-2.5">Minha Lista</button>
+                <motion.button
+                    className="text-bright pt-7 pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Início
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Minha Lista
+                </motion.button>
                 <hr className="text-gray-500 bg-gray-500 w-full border my-4"/>
 
                 <span className="text-blue-800 text-xs py-3">NAVEGAR</span>
-                <button className="pb-2.5">Treinamentos</button>
-                <button className="pb-2.5">Trilhas</button>
-                <button className="pb-2.5">Podcasts</button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Treinamentos
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Trilhas
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Podcasts
+                </motion.button>
                 <hr className="text-gray-500 bg-gray-500 w-full border my-4" />
 
                 <span className="text-blue-800 text-xs py-3">CATEGORIAS</span>
-                <button className="pb-2.5">Ferramentas e Sistemas</button>
-                <button className="pb-2.5">Gestão Estratégica</button>
-                <button className="pb-2.5">Produtos</button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Ferramentas e Sistemas
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Gestão Estratégica
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Produtos
+                </motion.button>
                 <div className="flex flex-row align-center">
-                    <button className="text-bright ml-4 text-sm py-1">Ver todas</button>
+                    <motion.button
+                        className="text-bright ml-4 text-sm py-1"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Ver todas
+                    </motion.button>
                     <div className="ml-2 flex justify-center">
                         <Image
                             src="/rightArrow.svg"
@@ -42,9 +97,27 @@ export default function Menu() {
                 <hr className="text-gray-500 bg-gray-500 w-full border my-4" />
 
                 <span className="text-blue-800 text-xs py-3">MATERIAL DE APOIO</span>
-                <button className="pb-2.5">Ferramentas</button>
-                <button className="pb-2.5">Biblioteca</button>
-                <button className="pb-2.5">Anotações</button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Ferramentas
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Biblioteca
+                </motion.button>
+                <motion.button
+                    className="pb-2.5"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Anotações
+                </motion.button>
             </div>
         </div>
     )

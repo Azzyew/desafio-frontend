@@ -280,7 +280,11 @@ export default function Home(props) {
               </div>
 
               <div className="lg:-m-20">
-                <button className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body lg:text-sm lg:mr-20">VER MAIS</button>
+                <motion.button
+                  className="bg-primary text-white text-xs px-6 py-2 rounded-md font-body lg:text-sm lg:mr-20"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >VER MAIS</motion.button>
               </div>
             </div>  
           </div>
@@ -303,50 +307,66 @@ export default function Home(props) {
           <span className="text-gray-400 mr-5 ml-3 lg:text-sm lg:mr-6">Em alta:</span>
 
           <div className="hidden lg:flex">
-            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+            <motion.button
+              className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Image
                 src="/cam.svg"
                 alt="camera icon"
                 width={14}
                 height={10.5}
               />
-            </button>
+            </motion.button>
             <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Vídeos</span>
           </div>
 
           <div className="hidden lg:flex">
-            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+            <motion.button
+              className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Image
                 src="/headphone.svg"
                 alt="headphone icon"
                 width={14}
                 height={14}
               />
-            </button>
+            </motion.button>
             <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Podcasts</span>
           </div>
 
           <div className="hidden lg:flex">
-            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+            <motion.button
+              className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Image
                 src="/book.svg"
                 alt="book icon"
                 width={13}
                 height={11}
               />
-            </button>
+            </motion.button>
             <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Artigos</span>
           </div>
 
           <div className="hidden lg:flex">
-            <button className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full">
+            <motion.button
+              className="w-6 h-6 bg-gradient-to-r from-blue-500 bg-opacity-50 to-blue-500 bg-opacity-75 rounded-full"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Image
                 src="/rocket.svg"
                 alt="rocket icon"
                 width={15}
                 height={15}
               />
-            </button>
+            </motion.button>
             <span className="hidden lg:flex text-bright text-sm pl-2 pr-7">Trilhas</span>
           </div>
         </div>
@@ -375,7 +395,13 @@ export default function Home(props) {
           </div>
 
         <div className="flex justify-center">
-          <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
+          <motion.button
+            className="text-bright bg-none border-none py-3 pb-4"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Ver mais
+          </motion.button>
         </div>
         
         </div>
@@ -422,7 +448,13 @@ export default function Home(props) {
 
 
         <div className="flex justify-center">
-          <button className="text-bright bg-none border-none py-3 pb-4">Ver mais</button>
+          <motion.button
+            className="text-bright bg-none border-none py-3 pb-4"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Ver mais
+          </motion.button>
         </div>
         
         </div>
@@ -445,7 +477,13 @@ export default function Home(props) {
               />
               <input className="bg-transparent border-b-2 w-full ml-2" type="text" placeholder="Ou procure por novas ideias..."/>
             </div>
-            <button className="bg-primary text-white font-body w-full rounded-sm py-2 mt-2">BUSCAR</button>
+            <motion.button
+              className="bg-primary text-white font-body w-full rounded-sm py-2 mt-2"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              BUSCAR
+            </motion.button>
           </div>
           
         </div>
